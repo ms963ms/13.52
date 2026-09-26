@@ -1830,10 +1830,10 @@ function runPayload(PLfile) {
 
 kexploit().then(() => {
 	setTimeout(() => {
-		runPayload("./goldhen_2.4b18.12.bin");	msgs.style.color = "red";
-
+runPayload("./goldhen_2.4b18.12.bin");	
 msgs.innerHTML = "تم تفعيل الغولدهين";
 	},500);
 }).catch(() => {
     msgs.innerHTML = "للأسف التعديل لم ينجح أعد تشغيل البلاستيشن وحاول مجددا ...";
+	msgs.style.color = "red";
 });
