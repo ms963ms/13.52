@@ -41,15 +41,15 @@ const STOP_BEFORE_DOUBLE = params.get("stop") === "beforedouble";
 function hostOk() {
     var m = document.getElementById("msgs");
     if (m) {
-         = "تم تفعيل الغولد هين";
+        m.innerHTML = "GoldHEN v2.4b18.12 Loaded ...";
     }
 }
 
 function hostFail() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "لأسف فشل التعديل اعد تشغيل البلاستيشن وحاول مجدا";
-        m.style.color = "red";
+        m.innerHTML = "Failed to Load! Restart Your Console ...";
+        m.style.color = "yellow";
     }
 }
 
@@ -455,7 +455,7 @@ let payloadRunning = false;
                 mark("ALREADY-ROOT", "getuid=" + uid0 + " setuid(0)=" + su0);
                 var m = document.getElementById("msgs");
                 if (m) {
-                    m.innerHTML = "التعديل مفعل مسبقا";
+                    m.innerHTML = "GoldHEN is Already Loaded ...";
                 }
                 return;
             }
@@ -2365,7 +2365,7 @@ let payloadRunning = false;
                                     if (payloadRunning) {
                                         mark("PAYLOAD-RUNNING",
                                             "bytes=" + payload.length + " entry=" + entry);
-                                        hostOk();
+										hostOk();
                                     }
                                 }
                             }
