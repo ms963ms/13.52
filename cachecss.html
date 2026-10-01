@@ -1,29 +1,3 @@
-if (localStorage.getItem("ps4_done") !== "yes") {
-    var max_attempts = 3; 
-    var attempts = 0;
-    var success = false;
-
-    while (attempts < max_attempts) {
-        var password = prompt("أدخل رمز الدخول:");
-        if (password === "1995") {
-            localStorage.setItem("ps4_done", "yes");
-            success = true;
-            break;
-        } else {
-            attempts++;
-            if (attempts < max_attempts) {
-                alert("كلمة سر خاطئة! متبقي لك " + (max_attempts - attempts) + " محاولات.");
-            } else {
-                alert("كلمة سر خاطئة! تم حظر الدخول.");
-            }
-        }
-    }
-
-    if (!success) {
-        window.location.replace("about:blank");
-    }
-}
-
 <!DOCTYPE html>
 <html manifest="css.manifest">
 <head>
